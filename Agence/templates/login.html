@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div class="container">
+    <div class="row  mt-5 mb-5 shadow">
+        <div class="col-lg-6  shadow p-4">
+            <h1>Connexion</h1>
+            <h2>{{ error }}</h2>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                <label for="exampleInputEmail1">Nom utilisateur</label>
+                <input type="text" name="username" class="form-control" id="exampleInputText1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Nous n'allons pas partage votre adresse email .</small>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputPassword1">Mots de pass</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Connection</button>
+                <h3>Vous n'avez pas de compte? Clickez</h3><a href="register">Creer votre compte</a>
+            </form>
+        </div>
+        <div class="col-lg-6">
+
+            <img src="https://media.istockphoto.com/id/104731717/fr/photo/centre-de-vill%C3%A9giature-de-luxe.jpg?s=612x612&w=0&k=20&c=qn-Ugr3N5J_JBKZttni3vimlfBOd52jWG3FouENXye0=" alt="" class="img-fluid img-reponsive">
+
+        </div>
+    
+
+    </div>
+</div>
+
+{% endblock %}
