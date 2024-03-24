@@ -13,9 +13,9 @@ def home(request):
 
         if user is not None:
             login(request, user)
-            if user.is_doctor:
+            if user.is_gerant:
                 return redirect('gerant')
-            elif user.is_infirmiere:
+            elif user.is_caissiere:
                 return redirect('caissiere')
             else:
                 return redirect('touriste')
